@@ -1,6 +1,6 @@
 package programmers_java;
 
-public class arraysPlus_2207299 {
+public class arraysPlus_220728 {
 	
     public static int solution(String s) {
         int answer = 0;
