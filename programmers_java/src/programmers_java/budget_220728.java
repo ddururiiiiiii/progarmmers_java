@@ -1,34 +1,25 @@
 package programmers_java;
 
-import java.util.Arrays;
-
 public class budget_220728 {
 	
-    public static int solution(int[] d, int budget) {
-        int answer = 0;
-        int dCnt = 0;
-        // 정렬하기 
-        Arrays.sort(d);
-        System.out.println("정렬함: " + Arrays.toString(d));
+    public static boolean solution(String s) {
+        boolean answer = false;
         
-       for (int i = 0; i < d.length; i++) {
-    	   answer += d[i];
-    	   if (answer <= budget) {
-    		   dCnt++;
-    	   }    	   
-       }
-        answer = dCnt;
-        System.out.println("지원한 업체수 : " + answer);
+        if(s.length() == 4 || s.length() == 6 ) {
+        	if(s.matches("[0-9]+")) {
+        		answer = true;
+        	}
+        }
         
+        System.out.println(answer);
         return answer;
     }
     
 	
 	public static void main(String[] args) {
+	String s = "1234";
 	
-	int[] d = {1,3,2,5,4};
-	int budget = 8;
-	solution(d, budget);
+	solution(s);
 	
 	}
 }
