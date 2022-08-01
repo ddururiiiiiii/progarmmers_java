@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class reportCount_220801 {
 	
-    public int[] solution(String[] id_list, String[] report, int k) {
+    public static int[] solution(String[] id_list, String[] report, int k) {
         int[] answer = new int[id_list.length];
         Map<String, HashSet<String>> map = new HashMap<>();
         Map<String, Integer> idxMap = new HashMap<>();
