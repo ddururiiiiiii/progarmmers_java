@@ -12,7 +12,7 @@ public class myMom_220802 {
         for (int i = 0; i < numbers.length; i++) {
         	for (int j = i+1; j < numbers.length; j++) {
         		int sum = numbers[i] + numbers[j];
-        		if (arrList.indexOf(i) < 0) {
+        		if (arrList.indexOf(sum) < 0) {
         			arrList.add(sum);
         		}
         	}
