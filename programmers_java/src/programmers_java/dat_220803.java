@@ -1,7 +1,5 @@
 package programmers_java;
 
-import java.util.Arrays;
-
 public class dat_220803 {
 
     public static int solution(String dartResult) {
