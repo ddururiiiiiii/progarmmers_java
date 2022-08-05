@@ -5,7 +5,7 @@ import java.util.List;
 
 public class fail_220804 {
 
-	public int[] solution(int N, int[] stages) {
+	public static int[] solution(int N, int[] stages) {
         int[] answer = new int[N];
         double users =stages.length;
         List<double[]> fail_rate = new ArrayList<>();
