@@ -1,23 +1,22 @@
 package programmers_java2;
 
-import java.util.Arrays;
-
 public class stringCare {
 
-    public static String solution(String s) {
-        String answer = "";
+    public static int solution(String s) {
+        int answer = 0;
+        String[] englishWord = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
         
-        char[] charArr = s.toCharArray();
-        Arrays.sort(charArr);
-        
-        for (int i = charArr.length-1; i >= 0; i--) {
-        	answer += charArr[i];
+        for (int i = 0; i < englishWord.length; i++) {
+        	s = s.replaceAll(englishWord[i], Integer.toString(i));
         }
+        
+        answer = Integer.parseInt(s);
+        
         return answer;
     }
 
 	public static void main(String[] args) {
-		String s = "Zbcdefg";
+		String s = "one4seveneight";
 		solution(s);
 	}
 }
