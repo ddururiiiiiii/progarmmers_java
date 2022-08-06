@@ -1,25 +1,30 @@
 package programmers_java2;
 
+import java.util.Arrays;
+
 public class nativePostiveNumSum {
 
-    public static int solution(int[] absolutes, boolean[] signs) {
-        int answer = 0;
+    public static int[] solution(int[] array, int[][] commands) {
         
-        for (int i = 0; i < absolutes.length; i++) {
-        	if (signs[i] == true) absolutes[i] = Math.abs(absolutes[i]);
-        	if (signs[i] == false) absolutes[i] = absolutes[i] * -1;
-        }
+    	// 결과 값에 담을 수
+    	int[] answer = new int[commands.length];
         
-        for (int i = 0; i < absolutes.length; i++) {
-        	answer += absolutes[i];
-        }
+       for (int i = 0; i < commands.length; i++) {
+    	   int a = commands[i][0];
+    	   int b = commands[i][1];
+    	   int c = commands[i][2];
+    	
+    	   int[] temp = Arrays.copyOfRange(array, a-1, b);
+    	   Arrays.sort(temp);
+    	   answer[i] = temp[c-1];
+       }
         
         return answer;
     }
 
 	public static void main(String[] args) {
-		int[] absolutes = {4, 7, 12};
-		boolean[] signs = {true, false, true};
-		solution(absolutes, signs);
+		int[] array = {1, 5, 2, 6, 3, 7, 4};
+		int[][] commands = {{2, 5, 3}, {4, 4, 1}, {1, 7, 3}};
+		solution(array, commands);
 	}
 }
